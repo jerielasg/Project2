@@ -1,0 +1,19 @@
+html {
+    font-size: 125%;
+    background-color: #fff;
+}
+
+body {
+    font-family: $primaryFont;
+    font-size: $baseFontSize;
+    color: $primary;
+}
+
+h1 {
+    font-family: $secondaryFont;
+    color: $secondary;
+}
+
+footer {
+    background-color: $tertiary;
+}
