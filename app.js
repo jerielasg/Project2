@@ -44,16 +44,7 @@ tripApp.setUpEventListeners = () => {
     // user clicks on the dropdown menu, the page reloads with new results
 
 // call init
-tripApp.init();
-
-
-
-
-
-
-// NavBar eventlisteners
-
-
+// ex. destinationApp.init();
 
 document.addEventListener("DOMContentLoaded", () => {
     // NAV BAR

@@ -5,11 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="partials/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Rubik&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/sass/styles.css">
     <script src="https://kit.fontawesome.com/d7e854893f.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <nav>
@@ -17,10 +15,10 @@
             <div class="logo">
                 <p>TITLE</p>
             </div>
-            <ul>
-                <button id="hamburger">
-                    <i class="fa fa-bars">..</i>
-                </button>
+            <button id="hamburger">
+                <i class="fa-regular fa-bars"></i>
+            </button>
+            <ul class="navUl">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -31,37 +29,32 @@
                 <i class="fa-solid fa-x"></i>
             </button>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact Us</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
-    <header>
+
+
+
+
+    <section class="content">
         <div class="wrapper">
-            <div>
-                <!-- insert background image or colour? -->
-                <h1>TITLE APP</h1>
-                <h3>Short Description</h3>
-            </div>
-        </div>
-    </header>
-    <main>
-        <!-- JERIEL'S PORTION -->
-    </main>
-    <footer>
-        <nav class="footerNav">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact Us</li>
+            <ul class="contentPlaceholder">
+                <li>
+                    
+                </li>
             </ul>
-        </nav>
-        <div class="copyright"></div>
-            <p>Created from Juno College, made by Haeun And Jeriel</p>
-            <p>API copyright by OpenTripMap API</p>
         </div>
-    </footer>
+    </section>
+    <footer>
+        <div class="copyright"></div>
+        <p>Created from Juno College, made by Haeun And Jeriel</p>
+        <p>API copyright by OpenTripMap API</p>
+        </div>
+    </footer> 
     <script src="app.js"></script>
+
 </body>
 </html>

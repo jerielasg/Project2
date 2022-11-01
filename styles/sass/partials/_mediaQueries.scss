@@ -1,0 +1,49 @@
+// NAVBAR MEDIA QUERY //
+
+@media (max-width:1000px) {
+    .navBar {
+        ul {
+            display: none;
+        }
+    }
+
+    #hamburger {
+        display: flex;
+        color: $primary;
+    }
+
+    .slideOutNav {
+        display: flex;
+        background-color: $secondary;
+        color: $primary;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        padding: 30px 50px;
+        width: 100%;
+        max-width: 450px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        z-index: 99999;
+        left: -450px;
+        transition: 0.3s;
+
+        &.open {
+            left: 0;
+        }
+
+        button {
+            align-self: flex-end;
+        }
+
+        a {
+            line-height: 2.2rem;
+
+            &:hover,
+            &:focus {
+                color: rgba($color: $primary, $alpha: 0.6);
+            }
+        }
+    }
+}
