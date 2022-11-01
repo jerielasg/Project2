@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Six+Caps&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -277,4 +278,99 @@ a {
   max-width: 1260px;
   width: 80%;
   margin: 0 auto;
+}
+
+html {
+  font-size: 125%;
+  background-color: #6FA1BB;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  color: #6C3622;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #6C3622;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+}
+.navBar ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navBar ul li {
+  padding-right: 30px;
+}
+
+#hamburger, .slideOutNav {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .navBar ul {
+    display: none;
+  }
+  #hamburger {
+    display: flex;
+    color: #6C3622;
+  }
+  .slideOutNav {
+    display: flex;
+    background-color: #CF9032;
+    color: #6C3622;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    padding: 30px 50px;
+    width: 100%;
+    max-width: 450px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    z-index: 99999;
+    left: -450px;
+    transition: 0.3s;
+  }
+  .slideOutNav.open {
+    left: 0;
+  }
+  .slideOutNav button {
+    align-self: flex-end;
+  }
+  .slideOutNav a {
+    line-height: 2.2rem;
+  }
+  .slideOutNav a:hover, .slideOutNav a:focus {
+    color: rgba(108, 54, 34, 0.6);
+  }
 }/*# sourceMappingURL=styles.css.map */
