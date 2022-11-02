@@ -1,0 +1,62 @@
+.contact {
+    background-color: $quaternary;
+    color: $quinary;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 6px 6px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input,
+textarea {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-family: $primaryFont;
+    padding: 5px;
+}
+
+input {
+    margin-right: 10px;
+    margin-bottom: 30px;
+    width: 40%;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 3px 3px;
+}
+
+::placeholder {
+    color: $quinary;
+    opacity: 0.8;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid $quinary;
+    border-radius: 3px 3px;
+    color: $quinary;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $quinary;
+        color: $quaternary;
+        transition: 0.4s;
+    }
+}
+
+.contactInfo {
+    font-size: 0.8rem;
+}

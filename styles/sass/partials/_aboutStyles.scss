@@ -1,0 +1,21 @@
+.about {
+    background-color: $quaternary;
+    color: $quinary;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 6px 6px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery, .aboutInfo {
+    width: 47%;
+}
+
+.gallery {
+    img {
+        border-radius: 6px 6px;
+    }
+}

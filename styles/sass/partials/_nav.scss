@@ -1,13 +1,23 @@
 .navBar {
     display: flex;
     justify-content: space-between;
+    padding-top: 40px;
 
     ul {
         display: flex;
         justify-content: space-between;
 
         li {
-            padding-right: 30px;
+            padding: 10px 0 0 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+
+            a {
+                &:hover {
+                    color: $primary;
+                    transition: 0.3s;
+                }
+            }
         }
     }
 }
@@ -19,3 +29,33 @@
     display: none;
 }
 
+
+
+// logo
+
+.logo {
+    p {
+        font-family: $secondaryFont;
+        font-size: 40px;
+        letter-spacing: 0.6rem;
+
+        a {
+            color: $quaternary;
+        }
+    }
+}
+
+.slideOutNav {
+    ul {
+        li {
+            a {
+                color: $quinary;
+                
+                &:hover {
+                        color: $primary;
+                        transition: 0.3s;
+                    }
+            }
+        }
+    }
+}
