@@ -22,3 +22,11 @@ footer {
     font-size: 12px;
     color: $quaternary;
 }
+
+.selectionDropDown {
+    label, select {
+        font-family: $primaryFont;
+        font-size: $baseFontSize;
+        color: $quinary;
+    }
+}
