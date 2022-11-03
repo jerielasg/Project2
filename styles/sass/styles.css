@@ -443,8 +443,8 @@ button:hover {
 
 .gallery img {
   border-radius: 6px 6px;
-  height: 550px;
-  width: 400px;
+  height: 85%;
+  width: 85%;
 }
 
 .navBar {
