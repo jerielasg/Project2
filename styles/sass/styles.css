@@ -443,6 +443,8 @@ button:hover {
 
 .gallery img {
   border-radius: 6px 6px;
+  height: 550px;
+  width: 400px;
 }
 
 .navBar {
@@ -492,6 +494,8 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 0.9rem;
+  bottom: 0;
+  position: absolute;
 }
 
 @media (max-width: 1000px) {
