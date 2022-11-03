@@ -47,3 +47,19 @@
         }
     }
 }
+
+@media (max-width:1100px) {
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .socialMedia {
+        justify-content: center;
+        padding-top: 30px;
+
+        :last-child {
+            padding-right: 0;
+        }
+    }
+}
