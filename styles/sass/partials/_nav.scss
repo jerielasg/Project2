@@ -59,3 +59,26 @@
         }
     }
 }
+
+#hamburger {
+    font-size: 1rem;
+    i {
+        color: $secondary;
+
+        &:hover,
+        &:focus {
+            color: $primary;
+            transition: 0.3s;
+        }
+    }
+}
+#close {
+    border:none;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $primary;
+    }
+
+}

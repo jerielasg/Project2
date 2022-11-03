@@ -486,6 +486,25 @@ button:hover {
   transition: 0.3s;
 }
 
+#hamburger {
+  font-size: 1rem;
+}
+#hamburger i {
+  color: #CF9032;
+}
+#hamburger i:hover, #hamburger i:focus {
+  color: #6C3622;
+  transition: 0.3s;
+}
+
+#close {
+  border: none;
+}
+#close:hover, #close:focus {
+  background-color: transparent;
+  color: #6C3622;
+}
+
 footer {
   padding: 5px 0;
   text-align: center;
