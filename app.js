@@ -59,3 +59,17 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove('open');
     })
 });
+
+
+
+
+//*********** ABOUT PAGE Image Transition*********** //
+
+// create a var that contains the images from the API
+// create namespace
+
+// create init function
+// create function to pull the random image from the var
+// create a timer function that pulls new rand image from the var
+// create event listener(OnPageLoad)
+
