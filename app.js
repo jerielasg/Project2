@@ -8,34 +8,54 @@ const tripApp = {};
 // get apikey
 tripApp.apikey = `5ae2e3f221c38a28845f05b631a77b1fc7c3248c874195c075918c42`;
 
+
+// Jeriel tripApp.apikey = `5ae2e3f221c38a28845f05b648a8524daca09304d39973a3c974ac0f`;
 // create init function & call functions below
 tripApp.init = () => {
     tripApp.getPlaces();
     tripApp.setUpEventListeners();
+    //tripApp.getRadius();
+
 }
 
 // create a function to get data from the API
 tripApp.getPlaces = () => {
     // get baseUrl and add new search params
     tripApp.baseUrl = new URL(`https://api.opentripmap.com/0.1/en/places/geoname`)
-    // console.log(tripApp.baseUrl);
+    tripApp.radiusUrl = new URL(`https://api.opentripmap.com/0.1/en/places/radius`)
+     //console.log(tripApp.baseUrl);
     tripApp.baseUrl.search = new URLSearchParams ({
         apikey: tripApp.apikey,
         lang: "en",
         name: "bridge"
+         
     })
-
+    //console.log(tripApp.baseUrl);
     // call fetch  
     fetch(tripApp.baseUrl)
     .then(response => response.json())
     .then(data => {
-        tripApp.displayPlaces(data.places)
-        // console.log(data.lat)
-        // console.log(data.lon)
+        console.log(data);
+        tripApp.displayPlaces(data.places);
+        //fetch(tripApp.baseUrl)
+        tripApp.radiusUrl.search = new URLSearchParams({
+            apikey: tripApp.apikey,
+            lang: "en",
+            radius: 2000,
+            lon: data.lon,
+            lat: data.lat
+        })
+        return fetch(tripApp.radiusUrl)
+        .then(response => response.json())
+        .then(data => {
+           console.log("data on second call",data);
+
+        })
+                
     })
+    
 }   
 
-// create another function to use the lon and lat and find places
 
 // create a function to display data we got from the fetch call 
 tripApp.displayPlaces = () => {
@@ -53,6 +73,12 @@ tripApp.setUpEventListeners = () => {
 // call init
 tripApp.init();
 
+
+
+
+
+
+//*********** HAMBURGER MENU *********** //
 document.addEventListener("DOMContentLoaded", () => {
     // NAV BAR
     const hamburgerButton = document.querySelector('#hamburger');

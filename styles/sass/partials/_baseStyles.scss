@@ -19,8 +19,19 @@ a {
     color: $secondary;
 }
 
+.selectionDropDown {
+    margin-top: 50px;
+  
+    label, select {
+        background-color: $quaternary;
+        border-radius: 6px 6px;
+        padding: 5px 5px;
+        
+    }
+}
+
 .contentItems {
-    height: 700px;
+    height: 600px;
     background-color: $quaternary;
 
     margin-top: 50px;

@@ -304,6 +304,12 @@ footer {
   color: #6FA1BB;
 }
 
+.selectionDropDown label, .selectionDropDown select {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 90%;
@@ -325,8 +331,17 @@ a {
   color: #CF9032;
 }
 
+.selectionDropDown {
+  margin-top: 50px;
+}
+.selectionDropDown label, .selectionDropDown select {
+  background-color: #6FA1BB;
+  border-radius: 6px 6px;
+  padding: 5px 5px;
+}
+
 .contentItems {
-  height: 700px;
+  height: 600px;
   background-color: #6FA1BB;
   margin-top: 50px;
   padding: 30px;
@@ -443,6 +458,8 @@ button:hover {
 
 .gallery img {
   border-radius: 6px 6px;
+  height: 85%;
+  width: 85%;
 }
 
 .navBar {
@@ -511,6 +528,8 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 0.9rem;
+  bottom: 0;
+  position: absolute;
 }
 
 @media (max-width: 1000px) {
