@@ -26,11 +26,11 @@
         display: flex;
         flex-direction: column;
         z-index: 99999;
-        left: -450px;
+        right: -450px;
         transition: 0.3s;
 
         &.open {
-            left: 0;
+            right: 0;
         }
 
         button {
