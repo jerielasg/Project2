@@ -20,15 +20,22 @@ tripApp.getPlaces = () => {
     tripApp.baseUrl = new URL(`https://api.opentripmap.com/0.1/en/places/geoname`)
     // console.log(tripApp.baseUrl);
     tripApp.baseUrl.search = new URLSearchParams ({
-        // 
+        apikey: tripApp.apikey,
+        lang: "en",
+        name: "bridge"
     })
+
     // call fetch  
     fetch(tripApp.baseUrl)
     .then(response => response.json())
     .then(data => {
         tripApp.displayPlaces(data.places)
+        // console.log(data.lat)
+        // console.log(data.lon)
     })
 }   
+
+// create another function to use the lon and lat and find places
 
 // create a function to display data we got from the fetch call 
 tripApp.displayPlaces = () => {
@@ -44,7 +51,7 @@ tripApp.setUpEventListeners = () => {
     // user clicks on the dropdown menu, the page reloads with new results
 
 // call init
-// ex. destinationApp.init();
+tripApp.init();
 
 document.addEventListener("DOMContentLoaded", () => {
     // NAV BAR
@@ -57,6 +64,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     closeButton.addEventListener('click', (e) => {
         menu.classList.remove('open');
+    })
+
+    // MODAL
+    const modal = document.querySelector(".modal");
+    const span = document.querySelector(".spanClose")
+    const button = document.querySelector(".modalButton")
+
+    span.addEventListener("click", function () {
+        modal.style.display = "none";
+    })
+
+    button.addEventListener("click", function () {
+        modal.style.display = "none";
     })
 });
 
