@@ -96,11 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.querySelector(".modal");
     const span = document.querySelector(".spanClose")
     const button = document.querySelector(".modalButton")
-
+    
     span.addEventListener("click", function () {
         modal.style.display = "none";
     })
-
     button.addEventListener("click", function () {
         modal.style.display = "none";
     })

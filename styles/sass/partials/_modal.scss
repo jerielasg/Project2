@@ -1,0 +1,56 @@
+.modal {
+    overflow: scroll;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0);
+    z-index: 100000;
+    width: 50%;
+    height: 30%;
+    text-align: center;
+    border: 3px solid $tertiary;
+    border-radius: 10px 10px;
+    background-color: rgba(238,201,92,0.85);
+    color: $quinary;
+
+    input {
+        color: $primary;
+        font-size: 14px;
+
+        ::placeholder {
+            color: $secondary;
+            opacity: 0.8;
+        }
+    }
+
+    button {
+
+        &:hover,
+        &:focus {
+            font-weight: bold;
+            background-color: $quinary;
+            color: $quaternary;
+        }
+    }
+
+}
+
+.modalTop {
+    background-color: $quinary;
+    color: $quaternary;
+    text-align: center;
+    margin-bottom: 55px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        font-family: $secondaryFont;
+        letter-spacing: 0.5rem;
+    }
+
+    span {
+        cursor: pointer;
+        padding-top: 2px;
+    }
+}

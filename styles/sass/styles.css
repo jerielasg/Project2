@@ -288,7 +288,7 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
-  color: #6FA1BB;
+  color: #e3856b;
 }
 
 h1,
@@ -301,7 +301,7 @@ p {
 
 footer {
   font-size: 12px;
-  color: #6FA1BB;
+  color: #e3856b;
 }
 
 .selectionDropDown label, .selectionDropDown select {
@@ -328,21 +328,21 @@ img {
 
 a {
   text-decoration: none;
-  color: #CF9032;
+  color: #80c4b7;
 }
 
 .selectionDropDown {
   margin-top: 50px;
 }
 .selectionDropDown label, .selectionDropDown select {
-  background-color: #6FA1BB;
+  background-color: #e3856b;
   border-radius: 6px 6px;
   padding: 5px 5px;
 }
 
 .contentItems {
   height: 600px;
-  background-color: #6FA1BB;
+  background-color: #e3856b;
   margin-top: 50px;
   padding: 30px;
   border-radius: 6px 6px;
@@ -352,7 +352,7 @@ a {
 }
 
 .contact {
-  background-color: #6FA1BB;
+  background-color: #e3856b;
   color: #FFFFFF;
   margin-top: 50px;
   padding: 30px;
@@ -418,7 +418,7 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #FFFFFF;
-  color: #6FA1BB;
+  color: #e3856b;
   transition: 0.4s;
 }
 
@@ -438,11 +438,11 @@ button:hover {
 }
 .socialMedia li a:hover, .socialMedia li a:focus {
   transition: 0.3s;
-  color: #CF9032;
+  color: #80c4b7;
 }
 
 .about {
-  background-color: #6FA1BB;
+  background-color: #e3856b;
   color: #FFFFFF;
   margin-top: 50px;
   padding: 30px;
@@ -477,7 +477,7 @@ button:hover {
   letter-spacing: 0.1rem;
 }
 .navBar ul li a:hover {
-  color: #6C3622;
+  color: #e3856b;
   transition: 0.3s;
 }
 
@@ -491,14 +491,14 @@ button:hover {
   letter-spacing: 0.6rem;
 }
 .logo p a {
-  color: #6FA1BB;
+  color: #e3856b;
 }
 
 .slideOutNav ul li a {
   color: #FFFFFF;
 }
 .slideOutNav ul li a:hover {
-  color: #6C3622;
+  color: #e3856b;
   transition: 0.3s;
 }
 
@@ -506,10 +506,10 @@ button:hover {
   font-size: 1rem;
 }
 #hamburger i {
-  color: #CF9032;
+  color: #80c4b7;
 }
 #hamburger i:hover, #hamburger i:focus {
-  color: #6C3622;
+  color: #e3856b;
   transition: 0.3s;
 }
 
@@ -518,18 +518,72 @@ button:hover {
 }
 #close:hover, #close:focus {
   background-color: transparent;
-  color: #6C3622;
+  color: #e3856b;
 }
 
 footer {
-  margin-top: 50px;
+  margin: 20px 0;
   padding: 5px 0;
   text-align: center;
   bottom: 0;
   width: 100%;
   font-size: 0.9rem;
   bottom: 0;
-  position: absolute;
+}
+
+.modal {
+  overflow: scroll;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 0);
+  z-index: 100000;
+  width: 50%;
+  height: 30%;
+  text-align: center;
+  border: 3px solid #eec95c;
+  border-radius: 10px 10px;
+  background-color: rgba(238, 201, 92, 0.85);
+  color: #FFFFFF;
+}
+.modal input {
+  color: #6C3622;
+  font-size: 14px;
+}
+.modal input ::-moz-placeholder {
+  color: #80c4b7;
+  opacity: 0.8;
+}
+.modal input :-ms-input-placeholder {
+  color: #80c4b7;
+  opacity: 0.8;
+}
+.modal input ::placeholder {
+  color: #80c4b7;
+  opacity: 0.8;
+}
+.modal button:hover, .modal button:focus {
+  font-weight: bold;
+  background-color: #FFFFFF;
+  color: #e3856b;
+}
+
+.modalTop {
+  background-color: #FFFFFF;
+  color: #e3856b;
+  text-align: center;
+  margin-bottom: 55px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.modalTop h3 {
+  font-family: "Six Caps", sans-serif;
+  letter-spacing: 0.5rem;
+}
+.modalTop span {
+  cursor: pointer;
+  padding-top: 2px;
 }
 
 @media (max-width: 1000px) {
@@ -542,7 +596,7 @@ footer {
   }
   .slideOutNav {
     display: flex;
-    background-color: #CF9032;
+    background-color: #80c4b7;
     color: #6C3622;
     min-height: 100vh;
     position: fixed;
