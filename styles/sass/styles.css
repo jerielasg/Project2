@@ -661,8 +661,14 @@ footer {
   }
 }
 @media (max-width: 1100px) {
-  .contact {
+  .contactFlex {
     flex-direction: column;
+    text-align: center;
+  }
+  .contactIcon {
+    display: none;
+  }
+  .contactHead {
     text-align: center;
   }
   .socialMedia {
