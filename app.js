@@ -59,10 +59,20 @@ tripApp.getPlaces = () => {
         for (let i = 0; i<5; i++) {
             //console.log(getRandom(data.features.length));
             const randomFive = getRandom(data.features.length);
+            console.log(data.features[randomFive])
+            if (data.features[randomFive].properties.name !== ""){
+                fivePlaces.push(data.features[randomFive]);
+            } else { 
+                i = i - 1
+                //console.log("isblank")
+            }
             //console.log(data.features[randomFive]);
-            fivePlaces.push(data.features[randomFive]);
+           // fivePlaces.push(data.features[randomFive]);
+           
         }
-        console.log(fivePlaces);
+       // tripApp.displayFive(fivePlaces);
+       // console.log(fivePlaces);
+        tripApp.displayFive(fivePlaces);
 
         })
                 
@@ -91,23 +101,45 @@ console.log(pullRandom(arr,5));
 
 
 
-
+// console.log("HELLLLP",tripApp.displayFive);
 // create a function to display data we got from the fetch call 
 tripApp.displayPlaces = (arrayOfPlaces) => {
     // create div, h2, p, image and append
-    // const placeContainer = document.getElementById()
     // const placeContainer = document.getElementById('placeList');
 
     // placeContainer.innerHTML = ``;
     // arrayOfPlaces.forEach(properties => {
-    //     const location = document.createElement('div');
+
+
+    //     //const location = document.createElement('div');
+    //     //location.classList.add(``);
 
     //     const title = document.createElement('h2');
     //     title.textContent = properties.name;
     //     console.log(title);
     // })
 }
+tripApp.displayFive = (arrayOfPlacesToo) => {
+    // create div, h2, p, image and append
+    console.log(arrayOfPlacesToo)
+    const placeContainer = document.getElementById('placeList');
 
+    placeContainer.innerHTML = ``;
+    arrayOfPlacesToo.forEach(properties => {
+
+
+        //const location = document.createElement('div');
+        //location.classList.add(``);
+
+        const title = document.createElement('h3');
+        title.textContent = properties.properties.name;
+        placeContainer.append(title)
+        //console.log(title.textContent);
+        //console.log(title);
+        console.log(title.textContent);
+    })
+}
+//console.log("Hi", tripApp.displayFive)
 // create a function with addEventlistener
 tripApp.setUpEventListeners = () => {
 
