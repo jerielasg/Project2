@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SceneIt</title>
     <link rel="stylesheet" href="./styles/sass/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/d7e854893f.js" crossorigin="anonymous"></script>
+    <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
+
 </head>
 
 <body>
@@ -39,36 +41,46 @@
     </nav>
 
     <section class="wrapper">
-        <div class="contact">
-            <div class="contactMessage">
-                <form action="mailto:sceneit@gmail.com">
-                <label for="name" class="sr-only">Name</label>
-                <input type="text" id="name" placeholder="Name">
 
-                <label for="email" class="sr-only">Email address</label>
-                <input type="email" id="email" placeholder="Email Address">
-          
-                <label for="message" class="sr-only">Message</label>
-                <textarea type="message" id=message rows="4" cols="12" placeholder="Message"></textarea>
-                <br>
-                <button class="button contactButton">Submit</button>
-                </form>
+        <div class="contact">
+            <div class="contactHead">
+                <h2>Let's Connect!</h2>
             </div>
-            <div class="contactInfo">
-                <ul class="socialMedia">
-                    <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="http://instagram.com"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
-                </ul>
-                <ul class="contactDetails">
-                    <li>sceneit@gmail.com</li>
-                    <li>123 - 456 - 7890</li>
-                    <li>123 Queen Street West, Unit 10</li>
-                    <li>Toronto, Ontario</li>
-                    <li>M5V 2D5</li>
-                </ul>
-            </div> <!-- END .socialMedia -->
+            <div class="contactFlex">
+                <div class="contactMessage">
+                    <form action="mailto:sceneit@gmail.com">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" placeholder="Name">
+                
+                        <label for="email" class="sr-only">Email address</label>
+                        <input type="email" id="email" placeholder="Email Address">
+                
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea type="message" id=message rows="4" cols="12" placeholder="Message"></textarea>
+                        <br>
+                        <button class="button contactButton">Submit</button>
+                    </form>
+                </div>
+                <div class="contactIcon">
+                    <img src="./assets/airplane.png" alt="">
+                </div>
+                <div class="contactInfo">
+                    <ul class="socialMedia">
+                        <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="http://instagram.com"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                    <ul class="contactDetails">
+                        <li>sceneit@gmail.com</li>
+                        <li>123 - 456 - 7890</li>
+                        <li>123 Queen Street West, Unit 10</li>
+                        <li>Toronto, Ontario</li>
+                        <li>M5V 2D5</li>
+                    </ul>
+                </div> <!-- END .socialMedia -->
+            </div>
+
         </div>
     </section>
     <footer>

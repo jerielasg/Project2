@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Six+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Sacramento&family=Six+Caps&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -357,9 +357,20 @@ a {
   margin-top: 50px;
   padding: 30px;
   border-radius: 6px 6px;
+}
+
+.contactFlex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.contactHead h2 {
+  margin: 15px 0;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-family: "Sacramento", cursive;
+  text-shadow: 2px 2px #Edcbd2;
 }
 
 input,
@@ -422,8 +433,13 @@ button:hover {
   transition: 0.4s;
 }
 
+.contactMessage {
+  width: 52%;
+}
+
 .contactInfo {
   font-size: 0.8rem;
+  width: 26%;
 }
 
 .socialMedia {
@@ -441,6 +457,14 @@ button:hover {
   color: #80c4b7;
 }
 
+.contactIcon {
+  width: 20%;
+  padding: 0 30px;
+}
+.contactIcon img {
+  width: 100%;
+}
+
 .about {
   background-color: #e3856b;
   color: #FFFFFF;
@@ -454,6 +478,14 @@ button:hover {
 
 .gallery, .aboutInfo {
   width: 47%;
+}
+
+.aboutInfo h2 {
+  margin: 15px 0;
+  letter-spacing: 0.2rem;
+  font-size: 2.8rem;
+  font-family: "Sacramento", cursive;
+  text-shadow: 2px 2px #Edcbd2;
 }
 
 .gallery img {

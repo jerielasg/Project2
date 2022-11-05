@@ -5,11 +5,21 @@
     padding: 30px;
     border-radius: 6px 6px;
 
+}
+.contactFlex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+.contactHead {
+    h2 {
+        margin: 15px 0;
+        letter-spacing: 0.2rem;
+        font-size: 2rem;
+        font-family: $tertiaryFont;
+        text-shadow: 2px 2px #Edcbd2;
+    }
+}
 input,
 textarea {
     border: none;
@@ -56,9 +66,12 @@ button {
         transition: 0.4s;
     }
 }
-
+.contactMessage {
+    width: 52%;
+}
 .contactInfo {
     font-size: 0.8rem;
+    width: 26%;
 }
 
 .socialMedia {
@@ -76,5 +89,14 @@ button {
                 color: $secondary;
             }
         }
+    }
+
+}
+
+.contactIcon {
+    width: 20%;
+    padding: 0 30px;
+    img {
+        width: 100%;
     }
 }

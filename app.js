@@ -78,9 +78,9 @@ tripApp.init();
 
 
 
-//*********** HAMBURGER MENU *********** //
+
 document.addEventListener("DOMContentLoaded", () => {
-    // NAV BAR
+    //*********** HAMBURGER MENU *********** //
     const hamburgerButton = document.querySelector('#hamburger');
     const closeButton = document.querySelector('#close')
     const menu = document.querySelector('.slideOutNav');
@@ -92,11 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove('open');
     })
 
-    // MODAL
+    //************** MODAL ****************//
     const modal = document.querySelector(".modal");
     const span = document.querySelector(".spanClose")
     const button = document.querySelector(".modalButton")
-    
+
     span.addEventListener("click", function () {
         modal.style.display = "none";
     })
