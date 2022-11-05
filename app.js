@@ -24,61 +24,79 @@ tripApp.getPlaces = (query) => {
     // get baseUrl and add new search params
     tripApp.baseUrl = new URL(`https://api.opentripmap.com/0.1/en/places/geoname`)
     tripApp.radiusUrl = new URL(`https://api.opentripmap.com/0.1/en/places/radius`)
-     //console.log(tripApp.baseUrl);
-    tripApp.baseUrl.search = new URLSearchParams ({
+    tripApp.infoUrl = new URL(`https://api.opentripmap.com/0.1/en/places/xid`)
+    //console.log(tripApp.baseUrl);
+    tripApp.baseUrl.search = new URLSearchParams({
         apikey: tripApp.apikey,
         lang: "en",
         name: query
-         
+
     })
     //console.log(tripApp.baseUrl);
     // call fetch  
     fetch(tripApp.baseUrl)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        tripApp.displayPlaces(data.places);
-        //fetch(tripApp.baseUrl)
-        tripApp.radiusUrl.search = new URLSearchParams({
-            apikey: tripApp.apikey,
-            lang: "en",
-            radius: 5000,
-            lon: data.lon,
-            lat: data.lat
-        })
-       return fetch(tripApp.radiusUrl)
         .then(response => response.json())
         .then(data => {
-           console.log(data.features[5]);
-           //math random function
-           
-        //    const arr = data.features;
+            console.log(data);
+            tripApp.displayPlaces(data.places);
+            //fetch(tripApp.baseUrl)
+            tripApp.radiusUrl.search = new URLSearchParams({
+                apikey: tripApp.apikey,
+                lang: "en",
+                radius: 5000,
+                lon: data.lon,
+                lat: data.lat,
+                rate: "3"
+            })
+            return fetch(tripApp.radiusUrl)
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data.features[5]);
+                    //math random function
 
-        const fivePlaces = [];
+                    //    const arr = data.features;
 
-        for (let i = 0; i<5; i++) {
-            //console.log(getRandom(data.features.length));
-            const randomFive = getRandom(data.features.length);
-            console.log(data.features[randomFive])
-            if (data.features[randomFive].properties.name !== ""){
-                fivePlaces.push(data.features[randomFive]);
-            } else { 
-                i = i - 1
-                //console.log("isblank")
-            }
-            //console.log(data.features[randomFive]);
-           // fivePlaces.push(data.features[randomFive]);
-           
-        }
-       // tripApp.displayFive(fivePlaces);
-       // console.log(fivePlaces);
-        tripApp.displayFive(fivePlaces);
+                    const fivePlaces = [];
+
+                    for (let i = 0; i < 5; i++) {
+                        //console.log(getRandom(data.features.length));
+                        const randomFive = getRandom(data.features.length);
+                        console.log(data.features[randomFive])
+                        if (data.features[randomFive].properties.name !== "") {
+                            fivePlaces.push(data.features[randomFive]);
+                        } else {
+                            i = i - 1
+                            //console.log("isblank")
+                        }
+                        //console.log(data.features[randomFive]);
+                        // fivePlaces.push(data.features[randomFive]);
+
+                    }
+                    // tripApp.displayFive(fivePlaces);
+                    // console.log(fivePlaces);
+                    tripApp.displayFive(fivePlaces);
+                    /*
+                    return fetch(tripApp.infoUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        tripApp.infoUrl.search = new URLSearchParams ({
+                            apikey: tripApp.apikey,
+                            lang: "en",
+                            xid: data.xid
+                            
+                            
+
+                        })
+                        tripApp.placesInfo(data.dataInfo);
+                        console.log(data.dataInfo)
+                    })
+                    */
+
+                })
 
         })
-                
-    })
-    
-}   
+
+}
 //Random 5 pull function for array
 const arrLength = 100;
 function getRandom(arrLength) {
@@ -94,8 +112,6 @@ function pullRandom(arr, num) {
     const shuffle = [...arr].sort(() => .5 - Math.random());
     return shuffle.slice(0,num);
 }
-
-
 console.log(pullRandom(arr,5));
 */
 
@@ -144,14 +160,14 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
 // create a function with addEventlistener
 tripApp.setUpEventListeners = () => {
     const select = document.querySelector('#cityNames');
-    select.addEventListener('change', function(event){
+    select.addEventListener('change', function (event) {
         event.preventDefault();
         const chosenCity = this.value;
         tripApp.getPlaces(chosenCity);
     })
 }
-    // event.preventDefault
-    // user clicks on the dropdown menu, the page reloads with new results
+// event.preventDefault
+// user clicks on the dropdown menu, the page reloads with new results
 
 // call init
 tripApp.init();
@@ -200,4 +216,3 @@ document.addEventListener("DOMContentLoaded", () => {
 // create function to pull the random image from the var
 // create a timer function that pulls new rand image from the var
 // create event listener(OnPageLoad)
-
