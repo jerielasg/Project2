@@ -18,6 +18,7 @@ tripApp.init = () => {
 
 }
 
+
 // create a function to get data from the API
 tripApp.getPlaces = () => {
     // get baseUrl and add new search params
@@ -45,16 +46,50 @@ tripApp.getPlaces = () => {
             lon: data.lon,
             lat: data.lat
         })
-        return fetch(tripApp.radiusUrl)
+       return fetch(tripApp.radiusUrl)
         .then(response => response.json())
         .then(data => {
-           console.log("data on second call",data);
+           console.log(data.features[5]);
+           //math random function
+           
+        //    const arr = data.features;
+
+        const fivePlaces = [];
+
+        for (let i = 0; i<5; i++) {
+            //console.log(getRandom(data.features.length));
+            const randomFive = getRandom(data.features.length);
+            //console.log(data.features[randomFive]);
+            fivePlaces.push(data.features[randomFive]);
+        }
+        console.log(fivePlaces);
 
         })
                 
     })
     
 }   
+//Random 5 pull function for array
+const arrLength = 100;
+function getRandom(arrLength) {
+    return Math.floor(Math.random() * arrLength)
+
+}
+
+console.log(getRandom(arrLength))
+
+
+/*const arr = tripApp.baseUrl;
+function pullRandom(arr, num) {
+    const shuffle = [...arr].sort(() => .5 - Math.random());
+    return shuffle.slice(0,num);
+}
+
+
+console.log(pullRandom(arr,5));
+*/
+
+
 
 
 // create a function to display data we got from the fetch call 
