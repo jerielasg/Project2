@@ -1,5 +1,4 @@
 .modal {
-    overflow: scroll;
     position: fixed;
     left: 50%;
     top: 20%;
@@ -36,6 +35,7 @@
 }
 
 .modalTop {
+    border-radius: 7px 7px 3px 3px;
     background-color: $quinary;
     color: $quaternary;
     text-align: center;

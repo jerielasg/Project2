@@ -340,7 +340,7 @@ a {
   padding: 5px 5px;
 }
 
-.contentItems {
+#placeList {
   height: 600px;
   background-color: #e3856b;
   margin-top: 50px;
@@ -568,7 +568,6 @@ footer {
 }
 
 .modal {
-  overflow: scroll;
   position: fixed;
   left: 50%;
   top: 20%;
@@ -605,6 +604,7 @@ footer {
 }
 
 .modalTop {
+  border-radius: 7px 7px 3px 3px;
   background-color: #FFFFFF;
   color: #e3856b;
   text-align: center;

@@ -27,7 +27,7 @@ tripApp.getPlaces = () => {
     tripApp.baseUrl.search = new URLSearchParams ({
         apikey: tripApp.apikey,
         lang: "en",
-        name: "bridge"
+        name: "lisbon"
          
     })
     //console.log(tripApp.baseUrl);
@@ -58,9 +58,19 @@ tripApp.getPlaces = () => {
 
 
 // create a function to display data we got from the fetch call 
-tripApp.displayPlaces = () => {
+tripApp.displayPlaces = (arrayOfPlaces) => {
     // create div, h2, p, image and append
     // const placeContainer = document.getElementById()
+    // const placeContainer = document.getElementById('placeList');
+
+    // placeContainer.innerHTML = ``;
+    // arrayOfPlaces.forEach(properties => {
+    //     const location = document.createElement('div');
+
+    //     const title = document.createElement('h2');
+    //     title.textContent = properties.name;
+    //     console.log(title);
+    // })
 }
 
 // create a function with addEventlistener
