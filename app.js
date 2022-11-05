@@ -20,7 +20,7 @@ tripApp.init = () => {
 
 
 // create a function to get data from the API
-tripApp.getPlaces = () => {
+tripApp.getPlaces = (query) => {
     // get baseUrl and add new search params
     tripApp.baseUrl = new URL(`https://api.opentripmap.com/0.1/en/places/geoname`)
     tripApp.radiusUrl = new URL(`https://api.opentripmap.com/0.1/en/places/radius`)
@@ -28,7 +28,7 @@ tripApp.getPlaces = () => {
     tripApp.baseUrl.search = new URLSearchParams ({
         apikey: tripApp.apikey,
         lang: "en",
-        name: "lisbon"
+        name: query
          
     })
     //console.log(tripApp.baseUrl);
@@ -42,7 +42,7 @@ tripApp.getPlaces = () => {
         tripApp.radiusUrl.search = new URLSearchParams({
             apikey: tripApp.apikey,
             lang: "en",
-            radius: 2000,
+            radius: 5000,
             lon: data.lon,
             lat: data.lat
         })
@@ -128,10 +128,11 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
     arrayOfPlacesToo.forEach(properties => {
 
 
-        //const location = document.createElement('div');
-        //location.classList.add(``);
+        // const location = document.createElement('div');
+        // location.classList.add(`location`);
 
         const title = document.createElement('h3');
+        title.classList.add('newPlaceName');
         title.textContent = properties.properties.name;
         placeContainer.append(title)
         //console.log(title.textContent);
@@ -142,7 +143,12 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
 //console.log("Hi", tripApp.displayFive)
 // create a function with addEventlistener
 tripApp.setUpEventListeners = () => {
-
+    const select = document.querySelector('#cityNames');
+    select.addEventListener('change', function(event){
+        event.preventDefault();
+        const chosenCity = this.value;
+        tripApp.getPlaces(chosenCity);
+    })
 }
     // event.preventDefault
     // user clicks on the dropdown menu, the page reloads with new results
