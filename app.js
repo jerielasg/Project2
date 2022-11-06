@@ -163,6 +163,12 @@ tripApp.setUpEventListeners = () => {
         event.preventDefault();
         const chosenCity = this.value;
         tripApp.getPlaces(chosenCity);
+        
+        const photoContainer = document.getElementById('photoDisplay');
+        const image = document.createElement('img');
+        photoContainer.innerHTML=``;
+        image.setAttribute("src","./assets/"+chosenCity+ ".jpg");
+        photoContainer.append(image)
     })
 }
 // event.preventDefault
