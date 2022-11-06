@@ -627,6 +627,55 @@ footer {
   padding-top: 2px;
 }
 
+.modalScore,
+.modalEndQuestion {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, 0);
+  z-index: 100000;
+  width: 65%;
+  height: 35%;
+  text-align: center;
+  border: 3px solid #eec95c;
+  border-radius: 10px 10px;
+  background-color: rgba(238, 201, 92, 0.85);
+  color: #FFFFFF;
+}
+.modalScore input,
+.modalEndQuestion input {
+  color: #6C3622;
+  font-size: 14px;
+}
+.modalScore input ::-moz-placeholder, .modalEndQuestion input ::-moz-placeholder {
+  color: #80c4b7;
+  opacity: 0.8;
+}
+.modalScore input :-ms-input-placeholder, .modalEndQuestion input :-ms-input-placeholder {
+  color: #80c4b7;
+  opacity: 0.8;
+}
+.modalScore input ::placeholder,
+.modalEndQuestion input ::placeholder {
+  color: #80c4b7;
+  opacity: 0.8;
+}
+.modalScore button:hover, .modalScore button:focus,
+.modalEndQuestion button:hover,
+.modalEndQuestion button:focus {
+  font-weight: bold;
+  background-color: #FFFFFF;
+  color: #e3856b;
+}
+
+.modalEndQuestion {
+  display: none;
+}
+
+.modal {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .navBar ul {
     display: none;

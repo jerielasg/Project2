@@ -85,7 +85,6 @@ tripApp.getPlaces = (query) => {
                             xid: data.xid
                             
                             
-
                         })
                         tripApp.placesInfo(data.dataInfo);
                         console.log(data.dataInfo)
@@ -177,7 +176,6 @@ tripApp.init();
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
     //*********** HAMBURGER MENU *********** //
     const hamburgerButton = document.querySelector('#hamburger');
@@ -191,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove('open');
     })
 
-    //************** MODAL ****************//
+//************** MODAL Subscribe ****************//
     const modal = document.querySelector(".modal");
     const span = document.querySelector(".spanClose")
     const button = document.querySelector(".modalButton")
@@ -205,6 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//************** MODAL Alert ****************//
+
+
+//************** MODAL EndQuestion ****************//
 
 
 //*********** ABOUT PAGE Image Transition*********** //
