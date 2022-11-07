@@ -147,28 +147,47 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
         // location.classList.add(`location`);
 
         const title = document.createElement('h3');
-        title.classList.add('newPlaceName');
+        
+        //const boxIcon = document.querySelectorAll('.fa-square');
+        title.classList.add('newPlaceName', 'far', 'fa-square');
+        //title.classList.add('fa-square');
+        //title.classList.add('fa-check-square');
         // title.textContent = properties.properties.name;
-        title.innerHTML = `<i class="far fa-square"></i>` + "  " + properties.properties.name;
+        //title.innerHTML = `<i class="far fa-square"></i>` + "  " + properties.properties.name;
+        title.innerHTML = properties.properties.name;
+
+
         placeContainer.append(title)
         //console.log(title.textContent);
         //console.log(title);
         function updateToDo(iElement) {
             iElement.classList.toggle('fa-square');
             iElement.classList.toggle('fa-check-square');
-            iElement.parentElement.classList.toggle('text-muted');
+            //iElement.parentElement.classList.toggle('text-muted');
         }
-<<<<<<< HEAD
-        title.addEventListener("click", function (event) {
-=======
+        const count = document.querySelectorAll('.fa-check-square').length;
+        console.log(count)
+        console.log("There are", count, "/5")
+
         title.addEventListener("click",function(event){
->>>>>>> 1f75a88d0b724b1177fa45a49944eee6d774fa2a
             updateToDo(event.target);
-            console.log('hi')
+          
         })
+
     })
 }
 
+
+
+// var trim = document.getElementById("placeList");
+
+// var count = trim.getElementsByClassName("newPlaceName far fa-check-square");
+
+// console.log(count.length);
+
+// const count = document.querySelectorAll('.fa-check-square').length;
+// console.log(count)
+// console.log("There are",count,"/5")
 
 //console.log("Hi", tripApp.displayFive)
 // create a function with addEventlistener
@@ -223,11 +242,11 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove('open');
     })
 
-    //************** MODAL Subscribe ****************//
+//************** MODAL ****************//
     const modal = document.querySelector(".modal");
-    const span = document.querySelector(".spanClose")
-    const button = document.querySelector(".modalButton")
-
+    const span = document.querySelector(".spanClose");
+    const button = document.querySelector(".modalButton");
+    
     span.addEventListener("click", function () {
         modal.style.display = "none";
     })
@@ -235,15 +254,28 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none";
     })
 
+    const modalScoreSubmit = document.getElementById('submitQ');
+    const modalScore = document.querySelector(".modalScore");
+    modalScoreSubmit.addEventListener('click', () => {
+        modalScore.style.display = "block";
+        //console.log('testClick1');
+        
+    })
 
+    const modalContinue = document.getElementById('modalContinue');
+    const modalEnd = document.querySelector(".modalEndQuestion");
+    modalContinue.addEventListener('click', () => {
+        modalEnd.style.display = "block";
+        modalScore.style.display = "none";
+    })
+    
 });
 
 // placeItem.addEventListener("click", function () {
 
 // });
 
-//************** MODAL Alert ****************//
-
+//************** MODAL Submit ****************//
 
 //************** MODAL EndQuestion ****************//
 
