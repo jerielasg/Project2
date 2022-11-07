@@ -158,7 +158,11 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
             iElement.classList.toggle('fa-check-square');
             iElement.parentElement.classList.toggle('text-muted');
         }
+<<<<<<< HEAD
         title.addEventListener("click", function (event) {
+=======
+        title.addEventListener("click",function(event){
+>>>>>>> 1f75a88d0b724b1177fa45a49944eee6d774fa2a
             updateToDo(event.target);
             console.log('hi')
         })
