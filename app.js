@@ -153,28 +153,19 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
         placeContainer.append(title)
         //console.log(title.textContent);
         //console.log(title);
-        
+        function updateToDo(iElement) {
+            iElement.classList.toggle('fa-square');
+            iElement.classList.toggle('fa-check-square');
+            iElement.parentElement.classList.toggle('text-muted');
+        }
+        title.addEventListener("click",function(event){
+            updateToDo(event.target);
+            console.log('hi')
+        })
     })
 }
 
-const placeItem = document.getElementsByClassName('.fa-square');
-console.log(placeItem);
 
-/*
-placeItem.addEventListener('click', function(event){
-    updateToDo(event.target);
-});
-function updateToDo(iElement) {
-    const firstClass = iElement.classList[0];
-    if (firstClass === 'far')
-     {
-        iElement.classList.toggle('fa-square');
-        iElement.classList.toggle('fa-check-square');
-        iElement.parentElement.classList.toggle('text-muted');
-    }
-}
-
-*/
 //console.log("Hi", tripApp.displayFive)
 // create a function with addEventlistener
 tripApp.setUpEventListeners = () => {
@@ -190,9 +181,22 @@ tripApp.setUpEventListeners = () => {
         image.setAttribute("src","./assets/"+chosenCity+ ".jpg");
         photoContainer.append(image)
     })
+
 }
 // event.preventDefault
 // user clicks on the dropdown menu, the page reloads with new results
+
+
+
+// function updateToDo(iElement) {
+//     const firstClass = iElement.classList[0];
+//     if (firstClass === 'far')
+//      {
+//         iElement.classList.toggle('fa-square');
+//         iElement.classList.toggle('fa-check-square');
+//         iElement.parentElement.classList.toggle('text-muted');
+//     }
+// }
 
 // call init
 tripApp.init();
@@ -226,8 +230,13 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", function () {
         modal.style.display = "none";
     })
+
+
 });
 
+// placeItem.addEventListener("click", function () {
+
+// });
 
 //************** MODAL Alert ****************//
 
