@@ -103,7 +103,7 @@ function getRandom(arrLength) {
 
 }
 
-console.log(getRandom(arrLength))
+// console.log(getRandom(arrLength))
 
 
 /*const arr = tripApp.baseUrl;
@@ -148,13 +148,33 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
 
         const title = document.createElement('h3');
         title.classList.add('newPlaceName');
-        title.textContent = properties.properties.name;
+       // title.textContent = properties.properties.name;
+        title.innerHTML = `<i class="far fa-square"></i>` +"  "+ properties.properties.name;
         placeContainer.append(title)
         //console.log(title.textContent);
         //console.log(title);
-        console.log(title.textContent);
+        
     })
 }
+
+const placeItem = document.getElementsByClassName('.fa-square');
+console.log(placeItem);
+
+/*
+placeItem.addEventListener('click', function(event){
+    updateToDo(event.target);
+});
+function updateToDo(iElement) {
+    const firstClass = iElement.classList[0];
+    if (firstClass === 'far')
+     {
+        iElement.classList.toggle('fa-square');
+        iElement.classList.toggle('fa-check-square');
+        iElement.parentElement.classList.toggle('text-muted');
+    }
+}
+
+*/
 //console.log("Hi", tripApp.displayFive)
 // create a function with addEventlistener
 tripApp.setUpEventListeners = () => {

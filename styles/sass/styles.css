@@ -310,6 +310,11 @@ footer {
   color: #FFFFFF;
 }
 
+.text-muted,
+.text-muted i {
+  color: "Six Caps", sans-serif;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 90%;
