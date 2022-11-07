@@ -138,7 +138,8 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
     // create div, h2, p, image and append
     console.log(arrayOfPlacesToo)
     const placeContainer = document.getElementById('placeList');
-
+    var count = 0;
+    
     placeContainer.innerHTML = ``;
     arrayOfPlacesToo.forEach(properties => {
 
@@ -147,7 +148,7 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
         // location.classList.add(`location`);
 
         const title = document.createElement('h3');
-        
+
         //const boxIcon = document.querySelectorAll('.fa-square');
         title.classList.add('newPlaceName', 'far', 'fa-square');
         //title.classList.add('fa-square');
@@ -164,18 +165,29 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
             iElement.classList.toggle('fa-square');
             iElement.classList.toggle('fa-check-square');
             //iElement.parentElement.classList.toggle('text-muted');
+ 
         }
-        const count = document.querySelectorAll('.fa-check-square').length;
-        console.log(count)
-        console.log("There are", count, "/5")
 
+
+
+        
         title.addEventListener("click",function(event){
             updateToDo(event.target);
-          
+            // if (title.classList.contains('.fa-square')) {
+            //     count++;
+            // } else {
+            //     count;
+            // }   
+            if (count <5 && title.classList.contains("fa-check-square") == true) {
+                count++;
+            } else if (title.classList.contains("fa-square") == true) {
+                count--;
+            }
+            console.log("There are", count, "/5");          
         })
 
-    })
-}
+    });
+};
 
 
 
