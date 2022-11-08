@@ -347,7 +347,8 @@ a {
 .selectionDropDown {
   margin-top: 50px;
 }
-.selectionDropDown label, .selectionDropDown select {
+.selectionDropDown label,
+.selectionDropDown select {
   background-color: #e3856b;
   border-radius: 6px 6px;
   padding: 5px 5px;
@@ -395,7 +396,6 @@ a {
 .buttonHolder {
   position: relative;
   right: 100px;
-  display: none;
 }
 .buttonHolder .submitQ {
   position: absolute;
@@ -768,7 +768,9 @@ footer {
     width: 100%;
   }
   .main #placeList h3 {
+    letter-spacing: 0.2rem;
     line-height: 2rem;
+    font-size: 1rem;
   }
   .main #photoDisplay {
     width: 100%;

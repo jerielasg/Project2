@@ -24,11 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //************** MODAL ****************//
     const modal = document.querySelector(".modal");
+    const spanMain = document.querySelector(".spanMainClose");
     const span = document.querySelector(".spanClose");
     const button = document.querySelector(".modalButton");
 
-    span.addEventListener("click", function () {
-        modal.style.display="none";
+    spanMain.addEventListener("click", function () {
+        modal.style.display = "none";
     })
     span.addEventListener("click", function () {
        // modal.style.display = "none";
