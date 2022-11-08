@@ -139,7 +139,7 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
     console.log(arrayOfPlacesToo)
     const placeContainer = document.getElementById('placeList');
     var count = 0;
-    
+
     placeContainer.innerHTML = ``;
     arrayOfPlacesToo.forEach(properties => {
 
@@ -183,7 +183,22 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
             } else if (title.classList.contains("fa-square") == true) {
                 count--;
             }
-            console.log("There are", count, "/5");          
+            console.log("There are", count, "/5");
+            
+            const score = document.querySelector('.score');
+            score.textContent = count;
+
+            const pass = document.querySelector('.pass');
+            const fail = document.querySelector('.fail');
+
+            if (count>=3) {
+                pass.style.display = "block";
+                fail.style.display = "none";
+
+            } else {
+                pass.style.display = "none";
+                fail.style.display = "block";
+            }
         })
 
     });
@@ -261,6 +276,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     span.addEventListener("click", function () {
         modal.style.display = "none";
+        modalScore.style.display = "none";
+        modalEndQuestion.style.display = "none"
     })
     button.addEventListener("click", function () {
         modal.style.display = "none";
