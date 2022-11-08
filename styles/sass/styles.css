@@ -746,6 +746,34 @@ footer {
   .slideOutNav a:hover, .slideOutNav a:focus {
     color: rgba(108, 54, 34, 0.6);
   }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main #placeList {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .main #placeList h3 {
+    letter-spacing: 0.2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+  .main #photoDisplay {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .main .buttonHolder {
+    margin-top: 20px;
+    position: static;
+    right: 0px;
+  }
+  .main .buttonHolder .submitQ {
+    position: static;
+  }
 }
 @media (max-width: 1100px) {
   .contactFlex {
