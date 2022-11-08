@@ -23,8 +23,8 @@
                 <i class="fa fa-bars"></i>
             </button>
             <ul class="navUl">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="app.html">App</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -33,93 +33,44 @@
                 <i class="fa-solid fa-x"></i>
             </button>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="app.html">App</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
-
     <div class="modal">
         <div class="modalTop">
             <h3>SceneIt</h3>
             <span class="spanClose">X</span>
         </div>
         <p>Sign up to our mailing list!</p>
-
+    
         <input class="modalEmail" type="email" placeholder="Email Address">
         <button class="modalButton" type="submit">GO!</button>
     </div>
-
-    <div class="modalScore">
-        <div class="modalTop">
-            <h3>SceneIt</h3>
-            <span class="spanClose">X</span>
-        </div>
-        <p>You scored <span class="score"></span>/5</p>
-        <span class="pass">You're well travelled, you could use some more travelling.</span>
-        <span class="fail">You need to travel more</span>
-        <button class="modalContinue" id="modalContinue" type="submit">Continue</button>
-
-    </div>
-
-    <div class="modalEndQuestion">
-        <div class="modalTop">
-            <h3>SceneIt</h3>
-            <span class="spanClose">X</span>
-        </div>
-        <p>Do you have money to travel???</p>
-        <a href="https://www.westjet.com/en-ca/flights">
-            <button class="modalButton" type="submit">YES</button>
-        </a>
-        <a href="https://www.westjet.com/en-ca/rewards/credit-cards">
-            <button class="modalButton" type="submit">NO</button>
-        </a>
-    </div>
-
-    <section class="content">
-        <div class="wrapper">
-            <div class="selectionDropDown">
-                <label for="cityNames">Select a City</label>
-                <select name="cityNames" id="cityNames">
-                    <option value="Lisbon">Lisbon</option>
-                    <option value="Paris">Paris</option>
-                    <option value="London">London</option>
-                    <option value="Barcelona">Barcelona</option>
-                    <option value="Budapest">Budapest</option>
-                    <option value="Prague">Prague</option>
-                    <option value="Dublin">Dublin</option>
-                    <option value="Edinburgh">Edinburgh</option>
-                    <option value="Venice">Venice</option>
-
-                </select>
-
+    <section>
+        <div class="wrapper about">
+            <div class="wrapper gallery">
+                <!-- carousel of destination image and description -->
+                <img src="./assets/lisbon.jpeg" alt="">
             </div>
-            <div class="main">
-                <div id="photoDisplay">
-
-                </div>
-                <div id="placeList">
-                    <ul>
-
-                    </ul>
-                   
-                </div>
-                <div class="buttonHolder">
-                    <button class="submitQ" id="submitQ">Submit</button>
-                </div>
+            <div class="wrapper aboutInfo">
+                <!-- insert background image or colour? -->
+                <img src="./assets/lightbulbs.png" alt="">
+                <!-- https://www.pngwing.com/en/search?q=string+lights -->
+                <h2>About</h2>
+                <h3>Explore unique places and exciting adventures!</h3>
             </div>
-
         </div>
     </section>
     <footer>
-        <div class="copyright"></div>
+        <div class="copyright wrapper"></div>
         <p>Created from Juno College, made by Haeun And Jeriel</p>
         <p>API copyright © OpenTripMap API</p>
         </div>
     </footer>
     <script src="app.js"></script>
-
 </body>
 
 </html>

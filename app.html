@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SceneIt</title>
+    <link rel="stylesheet" href="./styles/sass/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/d7e854893f.js" crossorigin="anonymous"></script>
+    <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper navBar">
+            <div class="logo">
+                <p><a href="index.html">SceneIt</a></p>
+            </div>
+            <button id="hamburger">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="navUl">
+                <li><a href="index.html">About</a></li>
+                <li><a href="app.html">App</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="slideOutNav">
+            <button id="close">
+                <i class="fa-solid fa-x"></i>
+            </button>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="app.html">App</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modalScore">
+        <div class="modalTop">
+            <h3>SceneIt</h3>
+            <span class="spanClose">X</span>
+        </div>
+        <p>You scored <span class="score"></span>/5</p>
+        <span class="pass">You're well travelled, you could use some more travelling.</span>
+        <span class="fail">You need to travel more</span>
+        <button class="modalContinue" id="modalContinue" type="submit">Continue</button>
+
+    </div>
+
+    <div class="modalEndQuestion">
+        <div class="modalTop">
+            <h3>SceneIt</h3>
+            <span class="spanClose">X</span>
+        </div>
+        <p>Do you have money to travel???</p>
+        <a href="https://www.westjet.com/en-ca/flights">
+            <button class="modalButton" type="submit">YES</button>
+        </a>
+        <a href="https://www.westjet.com/en-ca/rewards/credit-cards">
+            <button class="modalButton" type="submit">NO</button>
+        </a>
+    </div>
+
+    <section class="content">
+        <div class="wrapper">
+            <div class="selectionDropDown">
+                <label for="cityNames">Select a City</label>
+                <select name="cityNames" id="cityNames">
+                    <option value="Lisbon">Lisbon</option>
+                    <option value="Paris">Paris</option>
+                    <option value="London">London</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Prague">Prague</option>
+                    <option value="Dublin">Dublin</option>
+                    <option value="Edinburgh">Edinburgh</option>
+                    <option value="Venice">Venice</option>
+
+                </select>
+
+            </div>
+            <div class="main">
+                <div id="photoDisplay">
+
+                </div>
+                <div id="placeList">
+                    <ul>
+
+                    </ul>
+                   
+                </div>
+                <div class="buttonHolder">
+                    <button class="submitQ" id="submitQ">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="copyright"></div>
+        <p>Created from Juno College, made by Haeun And Jeriel</p>
+        <p>API copyright © OpenTripMap API</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
