@@ -741,6 +741,11 @@ footer {
   display: none;
 }
 
+.modalContinue,
+.modalButton {
+  margin: 20px 5px 0 5px;
+}
+
 @media (max-width: 1000px) {
   .navBar ul {
     display: none;
@@ -845,5 +850,11 @@ footer {
   }
   .socialMedia :last-child {
     padding-right: 0;
+  }
+  .contactInfo {
+    width: 100%;
+  }
+  .contactMessage {
+    width: 80%;
   }
 }/*# sourceMappingURL=styles.css.map */
