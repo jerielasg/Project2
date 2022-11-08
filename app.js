@@ -3,10 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //************** SubmitButtonPop ****************//
     const submitPop = document.querySelector(".selectionDropDown");
-    const submitQbtn = document.querySelector(".buttonHolder");
+    const submitQbtn = document.querySelector(".submitQ");
 
     submitPop.addEventListener("click", function() {
-        submitQbtn.style.display = "block";
+        submitQbtn.classList.remove('submitQ');
+        submitQbtn.classList.add('submitNew');
     })
 
 

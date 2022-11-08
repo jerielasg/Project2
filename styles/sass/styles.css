@@ -400,6 +400,15 @@ a {
 .buttonHolder .submitQ {
   position: absolute;
   bottom: 0px;
+  color: #e3856b;
+  border-color: #e3856b;
+}
+
+.submitNew {
+  position: absolute;
+  bottom: 0px;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .contact {

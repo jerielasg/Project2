@@ -80,5 +80,14 @@ a {
     .submitQ {
         position: absolute;
         bottom: 0px;
+        color: $quaternary;
+        border-color: $quaternary;
     }
+}
+
+.submitNew {
+    position: absolute;
+    bottom: 0px;
+    color: $quinary;
+    border-color: $quinary;
 }
