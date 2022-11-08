@@ -30,3 +30,16 @@
         width: 85%;
     }
 }
+
+.aboutButton {
+    margin-top: 20px;
+    a {
+        color: $quinary;
+
+        &:hover,
+        &:focus {
+            color: $quaternary;
+        }
+
+    }
+}
