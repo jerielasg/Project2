@@ -857,4 +857,13 @@ footer {
   .contactMessage {
     width: 80%;
   }
+}
+@media (max-width: 600px) {
+  .modal input {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .modal button {
+    margin-top: 7px;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -131,3 +131,16 @@
     }
 
 }
+
+@media (max-width:600px) {
+    .modal {
+        input {
+            width: 80%;
+            margin: 10px 0;
+        }
+
+        button {
+            margin-top: 7px;
+        }
+    }
+}
