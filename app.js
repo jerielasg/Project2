@@ -13,13 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove('open');
     })
 
+    //************** SubmitButtonPop ****************//
+    const submitPop = document.querySelector(".selectionDropDown");
+    const submitQbtn = document.querySelector(".buttonHolder");
+
+    submitPop.addEventListener("click", function() {
+        submitQbtn.style.display = "block";
+    })
+
+
     //************** MODAL ****************//
     const modal = document.querySelector(".modal");
     const span = document.querySelector(".spanClose");
     const button = document.querySelector(".modalButton");
 
     span.addEventListener("click", function () {
-        modal.style.display = "none";
+        modal.style.display="none";
+    })
+    span.addEventListener("click", function () {
+       // modal.style.display = "none";
         modalScore.style.display = "none";
         modalEndQuestion.style.display = "none"
     })
@@ -53,14 +65,13 @@ const tripApp = {};
 
 // get apikey
 tripApp.apikey = `5ae2e3f221c38a28845f05b631a77b1fc7c3248c874195c075918c42`;
+// Back-up tripApp.apikey = `5ae2e3f221c38a28845f05b648a8524daca09304d39973a3c974ac0f`;
 
-
-// Jeriel tripApp.apikey = `5ae2e3f221c38a28845f05b648a8524daca09304d39973a3c974ac0f`;
 // create init function & call functions below
 tripApp.init = () => {
     tripApp.getPlaces();
     tripApp.setUpEventListeners();
-    //tripApp.getRadius();
+   
 
 }
 
@@ -98,16 +109,16 @@ tripApp.getPlaces = (query) => {
                 .then(response => response.json())
                 .then(data => {
                     //console.log(data.features[5]);
-                    //math random function
-
-                    //    const arr = data.features;
+                    
+                    
+                    //math random function to pull 5 random locations
 
                     const fivePlaces = [];
 
                     for (let i = 0; i < 5; i++) {
                         //console.log(getRandom(data.features.length));
                         const randomFive = getRandom(data.features.length);
-                        console.log(data.features[randomFive])
+                        //console.log(data.features[randomFive])
                         if (data.features[randomFive].properties.name !== "") {
                             fivePlaces.push(data.features[randomFive]);
                         } else {
@@ -149,36 +160,11 @@ function getRandom(arrLength) {
 
 }
 
-// console.log(getRandom(arrLength))
 
 
-/*const arr = tripApp.baseUrl;
-function pullRandom(arr, num) {
-    const shuffle = [...arr].sort(() => .5 - Math.random());
-    return shuffle.slice(0,num);
-}
-console.log(pullRandom(arr,5));
-*/
-
-
-
-// console.log("HELLLLP",tripApp.displayFive);
 // create a function to display data we got from the fetch call 
 tripApp.displayPlaces = (arrayOfPlaces) => {
-    // create div, h2, p, image and append
-    // const placeContainer = document.getElementById('placeList');
 
-    // placeContainer.innerHTML = ``;
-    // arrayOfPlaces.forEach(properties => {
-
-
-    //     //const location = document.createElement('div');
-    //     //location.classList.add(``);
-
-    //     const title = document.createElement('h2');
-    //     title.textContent = properties.name;
-    //     console.log(title);
-    // })
 }
 tripApp.displayFive = (arrayOfPlacesToo) => {
     // create div, h2, p, image and append
@@ -284,15 +270,7 @@ tripApp.setUpEventListeners = () => {
 
 
 
-// function updateToDo(iElement) {
-//     const firstClass = iElement.classList[0];
-//     if (firstClass === 'far')
-//      {
-//         iElement.classList.toggle('fa-square');
-//         iElement.classList.toggle('fa-check-square');
-//         iElement.parentElement.classList.toggle('text-muted');
-//     }
-// }
+
 
 // call init
 tripApp.init();
@@ -303,21 +281,3 @@ tripApp.init();
 
 
 
-// placeItem.addEventListener("click", function () {
-
-// });
-
-//************** MODAL Submit ****************//
-
-//************** MODAL EndQuestion ****************//
-
-
-//*********** ABOUT PAGE Image Transition*********** //
-
-// create a var that contains the images from the API
-// create namespace
-
-// create init function
-// create function to pull the random image from the var
-// create a timer function that pulls new rand image from the var
-// create event listener(OnPageLoad)

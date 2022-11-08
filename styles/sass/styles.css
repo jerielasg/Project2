@@ -315,6 +315,14 @@ footer {
   color: "Six Caps", sans-serif;
 }
 
+.buttonHolder .submitQ {
+  font-family: "Rubik", sans-serif;
+}
+
+.placeList .newPlaceName {
+  font-family: "Rubik", sans-serif;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 90%;
@@ -383,6 +391,7 @@ a {
 .buttonHolder {
   position: relative;
   right: 100px;
+  display: none;
 }
 .buttonHolder .submitQ {
   position: absolute;
@@ -792,5 +801,8 @@ footer {
   }
   .socialMedia :last-child {
     padding-right: 0;
+  }
+  .about {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -76,6 +76,7 @@
             }
         }
     }
+   
 }
 
 @media (max-width:1100px) {
@@ -96,5 +97,9 @@
         :last-child {
             padding-right: 0;
         }
+    }
+    .about {
+        flex-direction: column;
+        
     }
 }

@@ -66,8 +66,10 @@ a {
 .buttonHolder{
     position: relative;
     right: 100px;
+    display: none;
     .submitQ {
         position: absolute;
         bottom: 0px;
+        
     }
 }
