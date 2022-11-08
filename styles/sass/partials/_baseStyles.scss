@@ -21,12 +21,13 @@ a {
 
 .selectionDropDown {
     margin-top: 50px;
-  
-    label, select {
+
+    label,
+    select {
         background-color: $quaternary;
         border-radius: 6px 6px;
         padding: 5px 5px;
-        
+
     }
 }
 
@@ -42,34 +43,42 @@ a {
     justify-content: space-between;
 
 }
+
 #placeList {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    h3 {
+        letter-spacing: 0.2rem;
+        font-size: 1rem;
+    }
 }
+
 #photoDisplay {
     width: 40%;
-    width:400px;
-    height:500px;    
-    overflow:hidden;
-    position:relative;    
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+
     img {
         width: 100%;
         border-radius: 6px 6px;
     }
 }
+
 .newPlaceName {
     color: $quinary;
 }
 
-.buttonHolder{
+.buttonHolder {
     position: relative;
     right: 100px;
-    display: none;
+
     .submitQ {
         position: absolute;
         bottom: 0px;
-        
     }
 }
