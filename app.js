@@ -109,27 +109,13 @@ tripApp.getPlaces = (query) => {
                             //console.log("isblank")
                         }
                         //console.log(data.features[randomFive]);
-                        // fivePlaces.push(data.features[randomFive]);
+                      
 
                     }
-                    // tripApp.displayFive(fivePlaces);
+                    
                     // console.log(fivePlaces);
                     tripApp.displayFive(fivePlaces);
-                    /*
-                    return fetch(tripApp.infoUrl)
-                    .then(response => response.json())
-                    .then(data => {
-                        tripApp.infoUrl.search = new URLSearchParams ({
-                            apikey: tripApp.apikey,
-                            lang: "en",
-                            xid: data.xid
-                            
-                            
-                        })
-                        tripApp.placesInfo(data.dataInfo);
-                        console.log(data.dataInfo)
-                    })
-                    */
+                   
 
                 })
 
@@ -221,17 +207,6 @@ tripApp.displayFive = (arrayOfPlacesToo) => {
 
 
 
-// var trim = document.getElementById("placeList");
-
-// var count = trim.getElementsByClassName("newPlaceName far fa-check-square");
-
-// console.log(count.length);
-
-// const count = document.querySelectorAll('.fa-check-square').length;
-// console.log(count)
-// console.log("There are",count,"/5")
-
-//console.log("Hi", tripApp.displayFive)
 // create a function with addEventlistener
 tripApp.setUpEventListeners = () => {
     const select = document.querySelector('#cityNames');
