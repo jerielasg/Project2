@@ -808,8 +808,8 @@ footer {
     position: static;
     right: 0px;
   }
-  .main .buttonHolder .submitQ {
-    position: static;
+  .main .buttonHolder .submitNew {
+    position: relative;
   }
   .about {
     flex-direction: column;
