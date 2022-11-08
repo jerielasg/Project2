@@ -1,17 +1,5 @@
-// JS for hamburger, modal
-
 document.addEventListener("DOMContentLoaded", () => {
-    //*********** HAMBURGER MENU *********** //
-    const hamburgerButton = document.querySelector('#hamburger');
-    const closeButton = document.querySelector('#close')
-    const menu = document.querySelector('.slideOutNav');
 
-    hamburgerButton.addEventListener('click', (e) => {
-        menu.classList.add('open');
-    });
-    closeButton.addEventListener('click', (e) => {
-        menu.classList.remove('open');
-    })
 
     //************** SubmitButtonPop ****************//
     const submitPop = document.querySelector(".selectionDropDown");
@@ -23,35 +11,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //************** MODAL ****************//
-    const modal = document.querySelector(".modal");
-    const span = document.querySelector(".spanClose");
-    const button = document.querySelector(".modalButton");
-
-    span.addEventListener("click", function () {
-        modal.style.display="none";
-    })
-    span.addEventListener("click", function () {
-       // modal.style.display = "none";
-        modalScore.style.display = "none";
-        modalEndQuestion.style.display = "none"
-    })
-    button.addEventListener("click", function () {
-        modal.style.display = "none";
-    })
 
     const modalScoreSubmit = document.getElementById('submitQ');
     const modalScore = document.querySelector(".modalScore");
+    const modalScoreClose = document.querySelector(".spanCloseScore");
+
     modalScoreSubmit.addEventListener('click', () => {
         modalScore.style.display = "block";
-        //console.log('testClick1');
-
     })
+    modalScoreClose.addEventListener('click', () => {
+        modalScore.style.display ="none";
+    })
+
 
     const modalContinue = document.getElementById('modalContinue');
     const modalEnd = document.querySelector(".modalEndQuestion");
+    const modalQuestionClose = document.querySelector('.spanCloseQuestion');
+
     modalContinue.addEventListener('click', () => {
         modalEnd.style.display = "block";
         modalScore.style.display = "none";
+    })
+    modalQuestionClose.addEventListener('click', () => {
+        modalEnd.style.display = "none";
     })
 
 });
