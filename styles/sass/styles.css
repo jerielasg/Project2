@@ -363,6 +363,10 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
 }
+#placeList h3 {
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+}
 
 #photoDisplay {
   width: 40%;
@@ -755,9 +759,7 @@ footer {
     width: 100%;
   }
   .main #placeList h3 {
-    letter-spacing: 0.2rem;
     line-height: 2rem;
-    font-size: 1rem;
   }
   .main #photoDisplay {
     width: 100%;

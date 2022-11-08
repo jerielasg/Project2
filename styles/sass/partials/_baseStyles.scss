@@ -47,6 +47,10 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    h3 {
+        letter-spacing: 0.2rem;
+        font-size: 1rem;
+    }
 }
 #photoDisplay {
     width: 40%;
